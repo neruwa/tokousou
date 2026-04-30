@@ -42,16 +42,25 @@
 
   
 #update {
+  position: fixed;
+  top: 0;
+  right: 10px;
   font-size: 12px;
-  text-align: right;
-  color: #777;
-  margin-top: 10px;
 }
 </style>
 </head>
 
 <body>
-
+<p id="update">
+<script>
+const modified = new Date(document.lastModified);
+const year = modified.getFullYear();
+const month = modified.getMonth() + 1;
+const day = modified.getDate();
+document.getElementById("update").textContent =
+  `最終更新：${year}年${month}月${day}日`;
+</script>
+</p>  
   <h1>都構想調べ</h1>
 
   <p>
@@ -70,16 +79,6 @@
   </p>
 <br>
   
-<p id="update">
-<script>
-const modified = new Date(document.lastModified);
-const year = modified.getFullYear();
-const month = modified.getMonth() + 1;
-const day = modified.getDate();
-document.getElementById("update").textContent =
-  `最終更新：${year}年${month}月${day}日`;
-</script>
-</p>  
 </body>
 
 </html>
