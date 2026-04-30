@@ -39,7 +39,15 @@
     a:hover {
       text-decoration: underline;
     }
-  </style>
+
+  
+#update {
+  font-size: 12px;
+  text-align: right;
+  color: #777;
+  margin-top: 10px;
+}
+</style>
 </head>
 
 <body>
@@ -61,8 +69,8 @@
     <a href="https://vdata.nikkei.com/newsgraphics/osaka-metropolis-plan_analysis/"> 日経新聞 </a><br>
   </p>
 <br>
-<p id="update"></p>
-
+  
+<p id="update">
 <script>
 const modified = new Date(document.lastModified);
 const year = modified.getFullYear();
@@ -71,7 +79,7 @@ const day = modified.getDate();
 document.getElementById("update").textContent =
   `最終更新：${year}年${month}月${day}日`;
 </script>
-  
+</p>  
 </body>
 
 </html>
